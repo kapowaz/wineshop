@@ -5,6 +5,9 @@
 {Breadcrumb}
 
 ## Groth Cabernet Sauvignon Oakville 2009
+
+![Photo of a bottle of Groth Cabernet Sauvignon Oakville 2009](/images/bottle.png)
+
 ### Product characteristics
 - country of origin: United States
 - region: California, Napa
@@ -32,11 +35,11 @@
 
 ### Related products
 - Stark Conde Cabernet 2011
--- 750 ML
--- USD 19,98
+	-- 750 ML
+	-- USD 19,98
 - Luna Beberide Art - 2010
--- 750 ML
--- USD 29,98
+	-- 750 ML
+	-- USD 29,98
 - Alta Maria Pinot Noir Santa - 2010
--- 500 ML
--- USD 19,99
+	-- 500 ML
+	-- USD 19,99
