@@ -34,7 +34,7 @@ h1 {
 } // h1
 
 h2, h3 {
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: mix($deep-red, black, 50%);
@@ -45,11 +45,13 @@ h2 {
 }
 
 img {
+  @include box-sizing(border-box);
   background: white;
   display: block;
   margin: 40px auto;
   padding: 20px;
   border: 2px solid mix($deep-red, $background-tan, 50%);
+  max-width: 100%;
 }
 
 div#content > ul {
@@ -89,6 +91,7 @@ nav#primary {
 } // nav#primary
 
 form#search {
+  display: -webkit-flex;
   display: flex;
   @include flex-wrap(wrap);
   
@@ -111,7 +114,7 @@ form#search {
 
   input[type=search] {
     border: 1px solid transparentize($mid-red, 0.3);
-    min-width: 240px;
+    min-width: 180px;
     @include flex(4);
   
     @include placeholder {
@@ -125,7 +128,7 @@ form#search {
 
   input[type=submit] {
     @include flex(1);
-    min-width: 120px;
+    min-width: 80px;
     margin-left: 10px;
     border: none;
     color: white;
@@ -155,7 +158,7 @@ nav#breadcrumbs {
       float: left;
       
       & + li:before {
-        content: "➔";
+        content: "→";
         margin: 0 5px;
       }
     } // nav#breadcrumbs ol li
