@@ -1,0 +1,85 @@
+@mixin font-size($size: 1.4) {
+  font-size: ($size * 10) + px;
+  font-size: $size + rem;
+}
+
+@mixin line-height($size: 1.6, $force-height: false) {
+  @if $force-height == true {
+    height: ($size * 10) + px;
+  }
+  line-height: ($size * 10) + px;
+  line-height: $size + rem;
+}
+
+@mixin text-underline-hover {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin text-no-underline-hover {
+  &:hover { text-decoration: none; }
+}
+
+@mixin font-family($fontname, $filename, $weight: normal, $style: normal, $stretch: normal) {
+  @font-face {
+    font-family: $fontname;
+    src: asset-url($filename + '.eot');
+    src: local($fontname), // disable this to test without the font installed locally
+      asset-url($filename + '.eot?#iefix') format('embedded-opentype'),
+      asset-url($filename + '.woff') format('woff'),
+      asset-url($filename + '.ttf') format('truetype'),
+      asset-url($filename + '.svg#' + $filename) format('svg');
+    font-weight: $weight;
+    font-style: $style;
+    font-stretch: $stretch;
+  }
+}
+
+// this include is required for licensing purposes
+// @import url("//hello.myfonts.net/count/2a01f1");
+//@include font-family('BodoniRecutFSCondensed', 'BodoniRecut-DemiCond-webfont', bold);
+//@include font-family('BodoniRecutFSCondensedItalic', 'BodoniRecut-CondItalic-webfont', normal, italic);
+//@include font-family('BodoniRecutFS', 'BodoniRecut-Italic-webfont', normal, italic);
+//@include font-family('BodoniRecutFS', 'BodoniRecut-Demi-webfont', bold);
+//@include font-family('BodoniRecutFS', 'BodoniRecut-Regular-webfont');
+//@include font-family('TradeGothicLTCom-BdCn20', '2A01F1_0_0', bold, $stretch: condensed);
+//
+//@mixin bodoni-recut-fs {
+//  font-family: 'BodoniRecutFS', Georgia, serif;
+//  -webkit-font-smoothing: antialiased;
+//  -moz-osx-font-smoothing: grayscale;
+//}
+//
+//@mixin bodoni-recut-fs-condensed {
+//  font-family: 'BodoniRecutFSCondensed', Georgia, serif;
+//  font-stretch: condensed;
+//  font-style: normal;
+//  -webkit-font-smoothing: antialiased;
+//  -moz-osx-font-smoothing: grayscale;
+//}
+//
+//@mixin bodoni-recut-fs-condensed-italic {
+//  font-family: 'BodoniRecutFSCondensedItalic', Georgia, serif;
+//  font-stretch: condensed;
+//  font-style: italic;
+//  -webkit-font-smoothing: antialiased;
+//  -moz-osx-font-smoothing: grayscale;
+//}
+//
+//@mixin trade-gothic-condensed {
+//  font-family: 'TradeGothicLTCom-BdCn20', Impact, sans-serif;
+//  -webkit-font-smoothing: antialiased;
+//  -moz-osx-font-smoothing: grayscale;
+//  font-weight: normal;
+//}
+//
+//@mixin trade-gothic-condensed-headline {
+//  @include trade-gothic-condensed;
+//  text-transform: uppercase;
+//  letter-spacing: -0.15rem;
+//  body.ie8 & {
+//    letter-spacing: -1px;
+//  }
+//}
