@@ -1,4 +1,5 @@
 # Setup
 
-1. Install [pow](http://pow.cx)
-2. ln -s ~/<path to your project> ~/.pow/wineshop
+1. `bundle`
+2. Install [pow](http://pow.cx)
+3. ln -s ~/{path to your project} ~/.pow/wineshop
