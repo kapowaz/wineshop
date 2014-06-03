@@ -15,6 +15,7 @@ class WineShop < Sinatra::Base
   set :assets_protocol, :http
   set :assets_css_compressor, :sass
   set :assets_js_compressor, :uglify
+  set :assets_precompile, %w(application.css application.js vendor.js *.png *.jpg *.svg *.eot *.ttf *.woff)
   
   register Sinatra::AssetPipeline
 end
