@@ -10,7 +10,11 @@ class WineShop < Sinatra::Base
     erb :hierarchy
   end
   
-  get "/content" do
+  get "/content.md" do
     erb :content, locals: { content: markdown(:product) }
+  end
+  
+  get "/content" do
+    erb :product
   end
 end

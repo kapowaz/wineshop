@@ -4,12 +4,25 @@ html {
 
 body {
   margin: 20px 20px 100px 20px;
-  font-family: 'Avenir', sans-serif;
+  font-family: 'Gill Sans', sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.03em;
   @include font-size(1.8);
   @include line-height(2.4);
   
-  background-color: mix($pale-green, white, 15%);
+  background-color: $background-tan; // mix($pale-green, white, 15%);
 } // body
+
+a {
+  color: transparentize($mid-red, 0.1);
+  text-decoration: none;
+  border-bottom: 1px solid transparentize($mid-red, 0.5);
+  
+  &:hover {
+    color: $mid-red;
+    border-color: transparentize($mid-red, 0.1);
+  }
+}
 
 h1 {
   font-family: 'Didot';
@@ -21,9 +34,10 @@ h1 {
 } // h1
 
 h2, h3 {
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: -0.03em;
-  color: #6a3135;
+  letter-spacing: 0.05em;
+  color: mix($deep-red, black, 50%);
 }
 
 h2 {
@@ -31,8 +45,11 @@ h2 {
 }
 
 img {
+  background: white;
   display: block;
-  margin: 0 auto;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid mix($deep-red, $background-tan, 50%);
 }
 
 div#content > ul {
@@ -40,8 +57,113 @@ div#content > ul {
   @include line-height(2.2);
 } // div#content > ul
 
+nav#primary {
+  border-top: 1px solid transparentize($deep-red, 0.9);
+  border-bottom: 1px solid transparentize($deep-red, 0.9);
+  margin: 40px 0;
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    @include font-size(1.8);
+    @include line-height(4);
+    
+    li {
+      display: inline-block;
+      
+      a {
+        color: lighten($deep-red, 10%);
+        border: none;
+      }
+      
+      & + li:before {
+        content: "•";
+        margin-right: 5px;
+      } // nav#primary ul li + li:before
+    } // nav#primary ul li
+  } // nav#primary ul
+} // nav#primary
+
+form#search {
+  display: flex;
+  @include flex-wrap(wrap);
+  
+  input[type=search],
+  input[type=submit] {
+    @include box-sizing(border-box);
+    @include appearance-none;
+    @include font-size(2);
+    @include line-height(4);
+    @include border-radius(2px);
+    padding: 0 5px;
+    height: 40px;
+    vertical-align: bottom;
+  
+    &:focus {
+      outline: none;
+      @include box-shadow(0 0 8px transparentize($mid-red, 0.5));
+    } // form#search input[type={search|submit}]:focus
+  } // form#search input[type={search|submit}]
+
+  input[type=search] {
+    border: 1px solid transparentize($mid-red, 0.3);
+    min-width: 240px;
+    @include flex(4);
+  
+    @include placeholder {
+      color: transparentize($mid-red, 0.7);
+    } // form#search input[type=search]::placeholder
+  
+    &:focus {
+      border-color: $deep-red;
+    } // form#search input[type=search]:focus
+  } // form#search input[type=search]
+
+  input[type=submit] {
+    @include flex(1);
+    min-width: 120px;
+    margin-left: 10px;
+    border: none;
+    color: white;
+    background-color: $mid-red;
+  
+    &:hover {
+      background-color: mix($mid-red, $deep-red, 50%);
+    } // form#search input[type=submit]:hover
+  
+    &:focus {
+      background-color: $deep-red;
+    } // form#search input[type=submit]:focus
+  } // form#search input[type=submit]
+} // form#search
+
+nav#breadcrumbs {
+  clear: both;
+  overflow: auto;
+  
+  ol {
+    padding: 0;
+    margin: 20px 0 80px;
+    list-style: none;
+    
+    li {
+      display: block;
+      float: left;
+      
+      & + li:before {
+        content: "➔";
+        margin: 0 5px;
+      }
+    } // nav#breadcrumbs ol li
+  } // nav#breadcrumbs ol
+} // nav#breadcrumbs
+
 // outline view for content hierarchy
-ol {
+> ol {
   list-style: none;
   margin: 0;
   padding: 0;

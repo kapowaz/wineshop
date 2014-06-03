@@ -6,5 +6,11 @@ $pale-red: #9c6669;
 $pale-green: #689461;
 $pale-gold: #9e9167;
 $pale-purple: #636093;
+$pale-blue: #646093;
 
 $deep-red: #6a3135;
+$deep-navy: #2f2d61;
+
+$tan: #e3dbd2;
+$background-tan: mix($tan, white, 40%);
+$mid-red: lighten($deep-red, 20%);
