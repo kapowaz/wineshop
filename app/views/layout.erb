@@ -4,7 +4,9 @@
 <%= partial :head %>
 
 <% tag :body, {:class => @page[:class], :'data-environment' => 'development'}.delete_if {|k,v| v.nil? } do %>
-  <%= yield %>
+  <div id="content">
+    <%= yield %>
+  </div>
   <%= script asset_path('vendor.js') %>
   <%= script asset_path('application.js') %>
 <% end %>

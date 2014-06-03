@@ -11,6 +11,6 @@ class WineShop < Sinatra::Base
   end
   
   get "/content" do
-    erb :content, locals: { content: markdown(:home) }
+    erb :content, locals: { content: markdown(:product) }
   end
 end

@@ -17,6 +17,7 @@
 - ABV: 14,5%
 - Color: red
 - Closure type: cork
+
 ### SKU characteristics
 - Price: USD 42,99
 - Stock status: avaliable
@@ -24,8 +25,9 @@
 {Add to cart}
 
 ### Description
-- "This is a lovely Cabernet to drink now and over the next few years. It shows its Oakville pedigree with smooth tannins and dry, complex flavors of blackberry, black currant and cherry, with a fine earthiness".
-- Taste: "currant, blackberry, cherry, bell pepper, olive, asparagus, spice, ginger, oak, vanilla, black cherry, plum, smoke, toast, and tar"
+"This is a lovely Cabernet to drink now and over the next few years. It shows its Oakville pedigree with smooth tannins and dry, complex flavors of blackberry, black currant and cherry, with a fine earthiness".
+
+Taste: "currant, blackberry, cherry, bell pepper, olive, asparagus, spice, ginger, oak, vanilla, black cherry, plum, smoke, toast, and tar"
 
 ### Customer reviews
 - John X: (5 stars) "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
