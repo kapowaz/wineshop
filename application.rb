@@ -12,6 +12,7 @@ class WineShop < Sinatra::Base
   APP_ROOT = settings.app_root
   
   # set :assets_host, "whatever.cloudfront.net" # replace this with a live CDN address for production
+  set :assets_precompile, %w(application.css application.js vendor.js *.png *.jpg *.svg *.eot *.ttf *.woff)
   set :assets_protocol, :http
   set :assets_css_compressor, :sass
   set :assets_js_compressor, :uglify
